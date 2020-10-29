@@ -8,10 +8,10 @@ html(class="no-js", lang="ru")
   head
     +head(head.defaults)
   body.page
-    |%=symbols=%
     main.page__inner
-      != pugHelpers.Icon.call(locals, {iconName: 'lock', className: 'page__lock page__lock_left'})
-      != pugHelpers.Icon.call(locals, {iconName: 'lock', className: 'page__lock page__lock_right'})
+      img.page__lock.page__lock_left(src="assets/images/general/lock.svg", alt="")
+      img.page__lock.page__lock_right(src="assets/images/general/lock.svg", alt="")
+
       +form().page__form
 
       +popup()#popup.page__popup.mfp-hide

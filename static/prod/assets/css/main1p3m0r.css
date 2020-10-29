@@ -254,7 +254,6 @@ table {
 }
 
 .button__icon {
-  margin-top: 1px;
   margin-right: 5px;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;

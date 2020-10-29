@@ -1,10 +1,8 @@
 mixin popup(data)
     .popup&attributes(attributes)
-        |<svg class="popup__logo" width="304" height="78" viewBox="0 0 304 78" fill="none" xmlns="http://www.w3.org/2000/svg">
-        |<rect width="304" height="78" rx="4" fill="#F8F8F8"/>
-        |<rect x="0.5" y="0.5" width="303" height="77" rx="3.5" stroke="black" stroke-opacity="0.02"/>
-        |</svg>
-        != pugHelpers.Icon.call(locals, {iconName: 'loading', className: 'popup__loading'})
+        img.popup__logo(src="assets/images/general/logo-popup.svg", alt="")
+        img.popup__loading(src="assets/images/general/loading.svg", alt="")
+
         .popup__form.form
             form.form__in(action="", method="post")
                 .form__top.popup__top
@@ -13,5 +11,5 @@ mixin popup(data)
                         input#form-captcha.form__input(type="text" value='foulin 78street')
                 .form__bottom.popup__bottom
                     a.form__submit.button(href="#")
-                        != pugHelpers.Icon.call(locals, {iconName: 'arrow', className: 'button__icon'})
+                        img.button__icon(src="assets/images/general/arrow.svg", alt="")
                         | Next

@@ -1,8 +1,6 @@
 mixin form(data)
     .form&attributes(attributes)
-        |<svg class="form__logo" width="139" height="30" viewBox="0 0 139 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-        |    <rect width="139" height="30" fill="#E3E3E3"/>
-        |</svg>
+        img.form__logo(src="assets/images/general/logo.svg", alt="")
 
         form.form__in(action="", method="post")
             .form__top
@@ -11,15 +9,13 @@ mixin form(data)
                     input#form-pass.form__input(type="password" value='********************************')
             .form__bottom
                 a.form__submit.button.open-popup(href="#popup")
-                    != pugHelpers.Icon.call(locals, {iconName: 'arrow', className: 'button__icon'})
+                    img.button__icon(src="assets/images/general/arrow.svg", alt="")
                     | Next
 
 
 mixin form-error(data)
     .form&attributes(attributes)
-        |<svg class="form__logo" width="139" height="30" viewBox="0 0 139 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-        |    <rect width="139" height="30" fill="#E3E3E3"/>
-        |</svg>
+        img.form__logo(src="assets/images/general/logo.svg", alt="")
         form.form__in(action="", method="post")
             .form__top
                 .form__field.form__field_error
@@ -28,5 +24,5 @@ mixin form-error(data)
                     span.form__error incorrect key
             .form__bottom
                 a.form__submit.button.open-popup(href="#popup")
-                    != pugHelpers.Icon.call(locals, {iconName: 'arrow', className: 'button__icon'})
+                    img.button__icon(src="assets/images/general/arrow.svg", alt="")
                     | Next
