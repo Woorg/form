@@ -332,6 +332,12 @@ img {
 }
 
 @media (min-width: 800px) {
+  .page__lock {
+    max-width: 330px;
+  }
+}
+
+@media (min-width: 800px) {
   .page__lock_left {
     left: -100px;
   }
