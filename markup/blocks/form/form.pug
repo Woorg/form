@@ -6,6 +6,13 @@ mixin form(data)
             .form__top
                 .form__field
                     label.form__label(for="form-pass") Decryption ID
+                        span.form__tooltip
+                            img.form__tooltip-icon(src="assets/images/general/tooltip.svg", alt="")
+                            span.form__tooltip-w
+                                span.form__tooltip-title Lorem
+                                span.form__tooltip-text ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
                     input#form-pass.form__input(type="password" value='********************************')
             .form__bottom
                 a.form__submit.button.open-popup(href="#popup")
@@ -20,6 +27,11 @@ mixin form-error(data)
             .form__top
                 .form__field.form__field_error
                     label.form__label(for="form-pass") Decryption ID
+                        span.form__tooltip
+                            img.form__tooltip-icon(src="assets/images/general/tooltip.svg", alt="")
+                            span.form__tooltip-w
+                                span.form__tooltip-title Lorem
+                                span.form__tooltip-text ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     input#form-pass.form__input(type="password" value='')
                     span.form__error incorrect key
             .form__bottom

@@ -41,7 +41,6 @@
       padding-bottom: 20px
       padding-left: 45px
 
-
   &__field
     width: 100%
     display: flex
@@ -64,15 +63,69 @@
 
 
   &__label
+    position: relative
     margin-bottom: 6px
+    display: flex
+    justify-content: center
+    align-items: center
     flex-grow: 1
     font-size: 13px
     text-align: center
     text-transform: uppercase
+    cursor: pointer
     +mq($medium)
       font-size: 13px
     +mq($large)
       font-size: 14px
+
+  &__tooltip
+    position: relative
+    margin-left: 5px
+    flex-shrink: 0
+    &:hover
+        .form__tooltip-w
+          display: block
+
+  &__tooltip-icon
+    width: 18px
+    height: 18px
+
+  &__tooltip-w
+    position: absolute
+    top: calc(100% + 10px)
+    left: calc(50% - 10px)
+    border: 1px solid rgba(48, 133, 250, 0.2)
+    padding-top: 12px
+    padding-right: 15px
+    padding-bottom: 9px
+    padding-left: 15px
+
+    display: none
+    width: 257px
+    // width: 100%
+    min-height: 89px
+    background-color: #eef3f9
+    font-size: 13px
+    text-align: left
+    text-transform: none
+    border-radius: 4px
+    transform: translateX(-50%)
+    +mq($medium)
+      left: calc(50% + 5px)
+    // +mq($large)
+    //   left: calc(50% + 10px)
+
+  &__tooltip-title
+    display: block
+    font-weight: 700
+
+  &__tooltip-text
+    font-weight: 400
+    line-height: 1.23
+
+
+
+
 
 
   &__input

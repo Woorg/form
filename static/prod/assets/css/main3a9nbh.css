@@ -187,6 +187,30 @@ table {
 }
 
 @font-face {
+  font-family: 'Blender Pro';
+  src: local("Blender Pro Thin"), local("BlenderPro-Thin"), url("../fonts/hinted-subset-BlenderPro-Thin.woff2") format("woff2"), url("../fonts/hinted-subset-BlenderPro-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blender Pro Book';
+  src: local("Blender Pro Book"), local("BlenderPro-Book"), url("../fonts/hinted-subset-BlenderPro-Book.woff2") format("woff2"), url("../fonts/hinted-subset-BlenderPro-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blender Pro';
+  src: local("Blender Pro Heavy"), local("BlenderPro-Heavy"), url("../fonts/hinted-subset-BlenderPro-Heavy.woff2") format("woff2"), url("../fonts/hinted-subset-BlenderPro-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Proxima Nova Rg';
   src: local("Proxima Nova Regular"), local("ProximaNova-Regular"), url("../fonts/hinted-subset-ProximaNova-Regular.woff2") format("woff2"), url("../fonts/hinted-subset-ProximaNova-Regular.woff") format("woff");
   font-weight: normal;
@@ -512,7 +536,20 @@ img {
 }
 
 .form__label {
+  position: relative;
   margin-bottom: 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
@@ -520,6 +557,7 @@ img {
   font-size: 13px;
   text-align: center;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 @media (min-width: 800px) {
@@ -532,6 +570,65 @@ img {
   .form__label {
     font-size: 14px;
   }
+}
+
+.form__tooltip {
+  position: relative;
+  margin-left: 5px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
+.form__tooltip:hover .form__tooltip-w {
+  display: block;
+}
+
+.form__tooltip-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.form__tooltip-w {
+  position: absolute;
+  top: -webkit-calc(100% + 10px);
+  top: calc(100% + 10px);
+  left: -webkit-calc(50% - 10px);
+  left: calc(50% - 10px);
+  border: 1px solid rgba(48, 133, 250, 0.2);
+  padding-top: 12px;
+  padding-right: 15px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  display: none;
+  width: 257px;
+  min-height: 89px;
+  background-color: #eef3f9;
+  font-size: 13px;
+  text-align: left;
+  text-transform: none;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 800px) {
+  .form__tooltip-w {
+    left: -webkit-calc(50% + 5px);
+    left: calc(50% + 5px);
+  }
+}
+
+.form__tooltip-title {
+  display: block;
+  font-weight: 700;
+}
+
+.form__tooltip-text {
+  font-weight: 400;
+  line-height: 1.23;
 }
 
 .form__input {
