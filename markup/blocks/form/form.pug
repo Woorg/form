@@ -1,6 +1,9 @@
 mixin form(data)
     .form&attributes(attributes)
-        != pugHelpers.Icon.call(locals, {iconName: 'logo', className: 'form__logo'})
+        |<svg class="form__logo" width="139" height="30" viewBox="0 0 139 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        |    <rect width="139" height="30" fill="#E3E3E3"/>
+        |</svg>
+
         form.form__in(action="", method="post")
             .form__top
                 .form__field
@@ -14,7 +17,9 @@ mixin form(data)
 
 mixin form-error(data)
     .form&attributes(attributes)
-        != pugHelpers.Icon.call(locals, {iconName: 'logo', className: 'form__logo'})
+        |<svg class="form__logo" width="139" height="30" viewBox="0 0 139 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        |    <rect width="139" height="30" fill="#E3E3E3"/>
+        |</svg>
         form.form__in(action="", method="post")
             .form__top
                 .form__field.form__field_error
