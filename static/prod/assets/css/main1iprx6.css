@@ -585,6 +585,7 @@ img {
 }
 
 .form__tooltip-icon {
+  margin-bottom: -2px;
   width: 18px;
   height: 18px;
 }
@@ -604,7 +605,7 @@ img {
   width: 257px;
   min-height: 89px;
   background-color: #eef3f9;
-  font-size: 13px;
+  font-size: 14px;
   text-align: left;
   text-transform: none;
   -webkit-border-radius: 4px;
