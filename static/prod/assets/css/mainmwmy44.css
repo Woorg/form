@@ -317,7 +317,8 @@ img {
 .page__lock {
   position: absolute;
   top: 50%;
-  display: none;
+  max-width: 100px;
+  width: 100%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -327,14 +328,17 @@ img {
   .page__lock {
     display: block;
     max-width: 200px;
-    width: 100%;
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1366px) {
   .page__lock {
     max-width: 330px;
   }
+}
+
+.page__lock_left {
+  left: -50px;
 }
 
 @media (min-width: 800px) {
@@ -347,6 +351,10 @@ img {
   .page__lock_left {
     left: -165px;
   }
+}
+
+.page__lock_right {
+  right: -50px;
 }
 
 @media (min-width: 800px) {

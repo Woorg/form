@@ -2,21 +2,23 @@
     &__lock
         position: absolute
         top: 50%
-        display: none
+        max-width: 100px
+        width: 100%
         transform: translateY(-50%)
         +mq($medium)
             display: block
             max-width: 200px
-            width: 100%
-        +mq($medium)
+        +mq($large)
             max-width: 330px
 
     &__lock_left
+        left: -50px
         +mq($medium)
             left: -100px
         +mq($large)
             left: -165px
     &__lock_right
+        right: -50px
         +mq($medium)
             right: -100px
         +mq($large)
