@@ -1,0 +1,27 @@
+mixin form(data)
+    .form&attributes(attributes)
+        != pugHelpers.Icon.call(locals, {iconName: 'logo', className: 'form__logo'})
+        form.form__in(action="", method="post")
+            .form__top
+                .form__field
+                    label.form__label(for="form-pass") Decryption ID
+                    input#form-pass.form__input(type="password" value='********************************')
+            .form__bottom
+                a.form__submit.button.open-popup(href="#popup")
+                    != pugHelpers.Icon.call(locals, {iconName: 'arrow', className: 'button__icon'})
+                    | Next
+
+
+mixin form-error(data)
+    .form&attributes(attributes)
+        != pugHelpers.Icon.call(locals, {iconName: 'logo', className: 'form__logo'})
+        form.form__in(action="", method="post")
+            .form__top
+                .form__field.form__field_error
+                    label.form__label(for="form-pass") Decryption ID
+                    input#form-pass.form__input(type="password" value='')
+                    span.form__error incorrect key
+            .form__bottom
+                a.form__submit.button.open-popup(href="#popup")
+                    != pugHelpers.Icon.call(locals, {iconName: 'arrow', className: 'button__icon'})
+                    | Next

@@ -1,0 +1,52 @@
+.popup
+    position: relative
+    z-index: 1
+    margin-right: auto
+    margin-left: auto
+    border: 1px solid #dfe4ec
+    padding-top: 18px
+    max-width: 352px
+    width: 100%
+    min-width: 241px
+    background-color: #ffffff
+    border-radius: 4px
+    box-shadow: 0 7px 70px rgba(0, 0, 0, 0.04)
+    +mq($medium)
+        padding-top: 20px
+        max-width: 400px
+        min-height: 296px
+
+
+    &__logo
+        margin-right: auto
+        margin-left: auto
+        margin-bottom: 6px
+        display: block
+        max-width: 250px
+        width: 100%
+        +mq($medium)
+            max-width: 304px
+
+
+    &__loading
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 18px
+        display: block
+        +mq($medium)
+            margin-bottom: 26px
+    &__top,
+    &__bottom
+        +mq($medium)
+            padding-right: 60px
+            padding-left: 60px
+
+    button.mfp-close
+        top: 7px
+        right: 7px
+        width: 12px
+        height: 12px
+        text-indent: -9999px
+        background: url('../images/general/close.svg') 0 0 no-repeat
+        background-size: cover
+        opacity: 1
