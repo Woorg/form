@@ -494,7 +494,7 @@ img {
 
 @media (min-width: 800px) {
   .form__field_error {
-    margin-bottom: 0;
+    margin-bottom: -13px;
   }
 }
 
